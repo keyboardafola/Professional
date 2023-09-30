@@ -1,0 +1,144 @@
+/*
+COLOR PALETTE
+https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
+#F7FFF7 - almost white
+#343434 - dark gray - almost black
+#2F3061 - blue dark
+#FFE66D - yellow
+#A1C6D7 - blue light
+#800000 - maroon
+#380504 - burnt maroon
+#BBA14F - dull gold
+#3f012c - dark plum
+*/
+
+border box fix
+html{
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* Global styles
+------------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+img {
+  width: 300px;
+}
+*/
+
+h1 a:visited {
+  color: #F7FFF7;
+}
+
+a {
+  color: #343434;
+  text-decoration: none;
+  transition: color 0.9s;
+}
+
+a:hover {
+  color: #450c1d;
+}
+
+/*a:visited {
+  color: #2F3061;
+}
+*/
+
+h2 {
+  margin: 0;
+}
+
+.content-wrap {
+  background-width: 70%;
+  max-width: 900px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+h3 {
+  margin-bottom: 0;
+}
+
+.item-details h3 + p {
+  font-style: italic;
+}
+
+.item-details h3 ~ p {
+  margin: 0;
+}
+
+.divider > section {
+  border-bottom: 1.5px dashed #450c1d;
+  padding: 25px 0;
+}
+
+.divider > section:last-of-type {
+  border-bottom: none;
+}
+
+.divider .line-exempt {
+  border-bottom: none;
+}
+
+/* Profile
+------------------------------------*/
+header {
+    background: #450c1d;
+    color: #F7FFF7;
+  }
+  
+  .headliner h2 ~ p {
+    text-align: left;
+  }
+    
+/* Work Experience
+------------------------------------*/
+.work-experience {
+    background:#A1C6D7;
+    padding-top: 5px;
+  }
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+  
+  .work-experience .army {
+    padding-bottom: 0px;
+  }
+  .work-experience .army + h2{
+    margin-bottom: none;
+  }
+/* Responsive ---------------*/
+@media screen and (min-width: 750px) {
+  header, footer {
+    text-align: center;
+  }
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  header h1, h2 {
+    text-align: left;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
+  .work-experience {
+    display: inline-block;
+    text-align: left;
+  }
+}
